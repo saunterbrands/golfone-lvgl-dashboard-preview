@@ -9,7 +9,7 @@
 	</api>
 
 	<styles>
-		<style name="left_panel_root" width="#dashboard_w" height="#dashboard_h" bg_opa="0" border_width="0" radius="0" pad_all="0" />
+		<style name="left_panel_root" width="#rail_w" height="#footer_h" bg_opa="0" border_width="0" radius="0" pad_all="0" />
 		<style name="left_glass_footer" bg_color="#glass_shell" bg_opa="60%" border_color="#glass_border" border_opa="49%" border_width="1" radius="12" shadow_width="18" shadow_color="#glass_shadow" shadow_opa="20%" shadow_offset_y="6" pad_all="0" />
 		<style name="left_glass_shine" bg_color="0xffffff" bg_opa="18%" border_width="0" radius="11" />
 		<style name="left_glass_fill" bg_color="#glass_shell" bg_opa="84%" border_width="0" radius="10" />
@@ -18,11 +18,11 @@
 		<style name="left_logo_stem" bg_color="#golfone_green" bg_opa="100%" border_width="0" radius="1" pad_all="0" />
 	</styles>
 
-	<view extends="lv_obj">
+	<view extends="lv_obj" width="#rail_w" height="#footer_h">
 		<remove_style_all />
 		<style name="left_panel_root" />
 
-		<lv_obj name="footer" ignore_layout="true" x="12" y="12" width="260" height="76" scrollable="false">
+		<lv_obj name="footer" ignore_layout="true" x="0" y="0" width="260" height="76" scrollable="false">
 			<remove_style_all />
 			<style name="left_glass_footer" />
 

@@ -10,7 +10,7 @@
 	</api>
 
 	<styles>
-		<style name="right_panel_root" width="#dashboard_w" height="#dashboard_h" bg_opa="0" border_width="0" radius="0" pad_all="0" />
+		<style name="right_panel_root" width="260" height="576" bg_opa="0" border_width="0" radius="0" pad_all="0" />
 		<style name="right_glass_panel" bg_color="#glass_shell" bg_opa="60%" border_color="#glass_border" border_opa="49%" border_width="1" radius="8" shadow_width="18" shadow_color="#glass_shadow" shadow_opa="20%" shadow_offset_y="6" pad_all="0" />
 		<style name="right_glass_panel_soft" bg_color="#glass_shell" bg_opa="52%" border_color="#glass_border" border_opa="49%" border_width="1" radius="8" shadow_width="14" shadow_color="#glass_shadow" shadow_opa="15%" shadow_offset_y="5" pad_all="0" />
 		<style name="right_glass_fill_strong" bg_color="#glass_shell" bg_opa="84%" border_width="0" radius="6" pad_all="0" />
@@ -27,11 +27,11 @@
 		<style name="right_nav_active_line" bg_color="#glass_ink" bg_opa="100%" border_width="0" radius="1" pad_all="0" />
 	</styles>
 
-	<view extends="lv_obj">
+	<view extends="lv_obj" width="260" height="576">
 		<remove_style_all />
 		<style name="right_panel_root" />
 
-		<lv_obj name="hole_header" ignore_layout="true" x="752" y="12" width="260" height="64" scrollable="false">
+		<lv_obj name="hole_header" ignore_layout="true" x="0" y="0" width="260" height="64" scrollable="false">
 			<remove_style_all />
 			<style name="right_glass_panel" />
 			<lv_obj name="hole_header_fill" ignore_layout="true" x="2" y="2" width="256" height="60" scrollable="false">
@@ -52,7 +52,7 @@
 			<lv_label text="..." x="231" y="21" width="24" style_text_font="dashboard_font_20" style_text_align="center" style_text_color="#glass_ink" />
 		</lv_obj>
 
-		<lv_obj name="scorecard" ignore_layout="true" x="752" y="85" width="260" height="320" scrollable="false">
+		<lv_obj name="scorecard" ignore_layout="true" x="0" y="73" width="260" height="320" scrollable="false">
 			<remove_style_all />
 			<style name="right_glass_panel" />
 			<lv_obj name="scorecard_fill" ignore_layout="true" x="2" y="2" width="256" height="316" scrollable="false">
@@ -84,7 +84,7 @@
 			<lv_obj name="row_moric" x="0" y="264" width="259" height="45" scrollable="false"><remove_style_all /><style name="right_score_row" /><lv_label text="Moric..." x="12" y="12" width="64" style_text_font="dashboard_font_18" style_text_color="#glass_ink" /><lv_label text="6" x="72" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="3" x="119" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="3" x="166" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="12" x="213" y="12" width="46" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
 		</lv_obj>
 
-		<lv_obj name="live_tips" ignore_layout="true" x="752" y="417" width="260" height="83" scrollable="false">
+		<lv_obj name="live_tips" ignore_layout="true" x="0" y="405" width="260" height="83" scrollable="false">
 			<remove_style_all />
 			<style name="right_glass_panel_soft" />
 			<lv_obj name="live_tips_fill" ignore_layout="true" x="2" y="2" width="256" height="79" scrollable="false">
@@ -104,7 +104,7 @@
 			<lv_label text="Green slopes back to front. Miss short to avoid bunker." x="14" y="43" width="176" style_text_font="dashboard_font_14" style_text_color="0x233029" />
 		</lv_obj>
 
-		<lv_obj name="utility_nav" ignore_layout="true" x="752" y="512" width="260" height="76" scrollable="false">
+		<lv_obj name="utility_nav" ignore_layout="true" x="0" y="500" width="260" height="76" scrollable="false">
 			<remove_style_all />
 			<style name="right_glass_panel" />
 			<lv_obj name="utility_nav_fill" ignore_layout="true" x="2" y="2" width="256" height="72" scrollable="false">
