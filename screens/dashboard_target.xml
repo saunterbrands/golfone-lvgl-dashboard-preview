@@ -3,7 +3,9 @@
 		<style name="dashboard_screen" />
 
 		<lv_image src="dashboard_bg_target" x="0" y="0" />
-		<left_footer x="#rail_margin" y="#rail_margin" />
-		<pin_readout x="428" y="230" />
+		<dashboard_left_panel x="0" y="0" />
+		<dashboard_right_panel x="0" y="0" />
+		<pin_readout x="439" y="230" />
+		<zoom_controls x="292" y="486" />
 	</view>
 </screen>

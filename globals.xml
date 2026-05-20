@@ -5,7 +5,7 @@
 		<int name="rail_w" value="260" />
 		<int name="rail_gap" value="9" />
 		<int name="rail_margin" value="12" />
-		<int name="footer_h" value="74" />
+		<int name="footer_h" value="76" />
 		<int name="glass_radius" value="12" />
 
 		<color name="glass_ink" value="0x082219" />
@@ -27,9 +27,12 @@
 	<subjects>
 		<string name="dashboard_pace_status" value="8 min behind" />
 		<string name="dashboard_clock_label" value="9:41 AM" />
+		<string name="dashboard_hole_number" value="4" />
+		<string name="dashboard_hole_title" value="Scenic Vie..." />
+		<string name="dashboard_hole_subtitle" value="Par 3 - 225 Yards" />
 		<string name="pin_yards_label" value="225" />
 		<string name="pin_unit_label" value="YARDS" />
-		<string name="pin_elevation_label" value="+3 ft" />
+		<string name="pin_elevation_label" value="-19 FT" />
 	</subjects>
 
 	<images>
@@ -42,8 +45,14 @@
 		<bin name="dashboard_font_8" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="8" range="0x20-0x7f" />
 		<bin name="dashboard_font_9" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="9" range="0x20-0x7f" />
 		<bin name="dashboard_font_12" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="12" range="0x20-0x7f" />
+		<bin name="dashboard_font_14" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="14" range="0x20-0x7f" />
 		<bin name="dashboard_font_15" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="15" range="0x20-0x7f" />
+		<bin name="dashboard_font_16" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="16" range="0x20-0x7f" />
+		<bin name="dashboard_font_18" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="18" range="0x20-0x7f" />
+		<bin name="dashboard_font_20" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="20" range="0x20-0x7f" />
+		<bin name="dashboard_font_24" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="24" range="0x20-0x7f" />
 		<bin name="dashboard_font_28" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="28" range="0x20-0x7f" />
 		<bin name="dashboard_font_46" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="46" range="0x20-0x7f" />
+		<bin name="dashboard_font_48" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="48" range="0x20-0x7f" />
 	</fonts>
 </globals>

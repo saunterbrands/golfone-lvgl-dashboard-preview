@@ -1,0 +1,125 @@
+<component>
+	<previews>
+		<preview name="target_map" style_bg_image_src="dashboard_bg_target" style_bg_color="0x07120e" />
+	</previews>
+
+	<api>
+		<prop name="hole_subject" type="subject" default="dashboard_hole_number" />
+		<prop name="title_subject" type="subject" default="dashboard_hole_title" />
+		<prop name="subtitle_subject" type="subject" default="dashboard_hole_subtitle" />
+	</api>
+
+	<styles>
+		<style name="right_panel_root" width="#dashboard_w" height="#dashboard_h" bg_opa="0" border_width="0" radius="0" pad_all="0" />
+		<style name="right_glass_panel" bg_color="#glass_shell" bg_opa="60%" border_color="#glass_border" border_opa="49%" border_width="1" radius="8" shadow_width="18" shadow_color="#glass_shadow" shadow_opa="20%" shadow_offset_y="6" pad_all="0" />
+		<style name="right_glass_panel_soft" bg_color="#glass_shell" bg_opa="52%" border_color="#glass_border" border_opa="49%" border_width="1" radius="8" shadow_width="14" shadow_color="#glass_shadow" shadow_opa="15%" shadow_offset_y="5" pad_all="0" />
+		<style name="right_glass_fill_strong" bg_color="#glass_shell" bg_opa="84%" border_width="0" radius="6" pad_all="0" />
+		<style name="right_glass_fill_soft" bg_color="#glass_shell" bg_opa="76%" border_width="0" radius="6" pad_all="0" />
+		<style name="right_glass_shine" bg_color="0xffffff" bg_opa="18%" border_width="0" radius="7" pad_all="0" />
+		<style name="right_glass_shade_style" bg_color="#glass_shade" bg_opa="7%" border_width="0" radius="7" pad_all="0" />
+		<style name="right_hole_number_box" bg_color="0x06442f" bg_opa="100%" border_width="0" radius="8" pad_all="0" />
+		<style name="right_score_header" bg_color="#golfone_green" bg_opa="100%" border_width="0" radius="0" pad_all="0" />
+		<style name="right_score_par_header" bg_color="0x173a30" bg_opa="100%" border_width="0" radius="0" pad_all="0" />
+		<style name="right_score_row" bg_color="0xffffff" bg_opa="20%" border_color="#glass_ink" border_opa="19%" border_width="0" radius="0" pad_all="0" />
+		<style name="right_map_chip" bg_color="0x72a928" bg_opa="82%" border_color="0xffffff" border_opa="100%" border_width="1" radius="18" pad_all="0" />
+		<style name="right_nav_cell" bg_opa="0" border_width="0" radius="0" pad_all="0" />
+		<style name="right_nav_icon_ring" bg_opa="0" border_color="0x5e9f25" border_opa="100%" border_width="2" radius="14" pad_all="0" />
+		<style name="right_nav_active_line" bg_color="#glass_ink" bg_opa="100%" border_width="0" radius="1" pad_all="0" />
+	</styles>
+
+	<view extends="lv_obj">
+		<remove_style_all />
+		<style name="right_panel_root" />
+
+		<lv_obj name="hole_header" ignore_layout="true" x="752" y="12" width="260" height="64" scrollable="false">
+			<remove_style_all />
+			<style name="right_glass_panel" />
+			<lv_obj name="hole_header_fill" ignore_layout="true" x="2" y="2" width="256" height="60" scrollable="false">
+				<remove_style_all />
+				<style name="right_glass_fill_strong" />
+			</lv_obj>
+			<lv_obj name="hole_header_shine" ignore_layout="true" x="1" y="1" width="258" height="24" scrollable="false">
+				<remove_style_all />
+				<style name="right_glass_shine" />
+			</lv_obj>
+			<lv_obj name="hole_box" ignore_layout="true" x="0" y="0" width="60" height="64" scrollable="false">
+				<remove_style_all />
+				<style name="right_hole_number_box" />
+				<lv_label bind_text="$hole_subject" x="0" y="5" width="60" style_text_font="dashboard_font_48" style_text_align="center" style_text_color="0xffffff" />
+			</lv_obj>
+			<lv_label bind_text="$title_subject" x="72" y="8" width="146" style_text_font="dashboard_font_24" style_text_color="#glass_ink" />
+			<lv_label bind_text="$subtitle_subject" x="72" y="39" width="146" style_text_font="dashboard_font_14" style_text_color="#glass_ink" />
+			<lv_label text="..." x="231" y="21" width="24" style_text_font="dashboard_font_20" style_text_align="center" style_text_color="#glass_ink" />
+		</lv_obj>
+
+		<lv_obj name="scorecard" ignore_layout="true" x="752" y="85" width="260" height="320" scrollable="false">
+			<remove_style_all />
+			<style name="right_glass_panel" />
+			<lv_obj name="scorecard_fill" ignore_layout="true" x="2" y="2" width="256" height="316" scrollable="false">
+				<remove_style_all />
+				<style name="right_glass_fill_strong" />
+			</lv_obj>
+			<lv_obj name="scorecard_shine" ignore_layout="true" x="1" y="1" width="258" height="42" scrollable="false">
+				<remove_style_all />
+				<style name="right_glass_shine" />
+			</lv_obj>
+			<lv_label text="SCORECARD" x="12" y="9" width="180" style_text_font="dashboard_font_16" style_text_color="#glass_ink" />
+			<lv_label text="EDIT" x="212" y="10" width="38" style_text_font="dashboard_font_12" style_text_align="right" style_text_color="#glass_ink" />
+
+			<lv_obj name="grid_hole_name" x="0" y="39" width="72" height="45" scrollable="false"><remove_style_all /><style name="right_score_header" /><lv_label text="HOLE" x="0" y="13" width="72" style_text_font="dashboard_font_16" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
+			<lv_obj name="grid_hole_2" x="72" y="39" width="47" height="45" scrollable="false"><remove_style_all /><style name="right_score_header" /><lv_label text="2" x="0" y="13" width="47" style_text_font="dashboard_font_16" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
+			<lv_obj name="grid_hole_3" x="119" y="39" width="47" height="45" scrollable="false"><remove_style_all /><style name="right_score_header" /><lv_label text="3" x="0" y="13" width="47" style_text_font="dashboard_font_16" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
+			<lv_obj name="grid_hole_4" x="166" y="39" width="47" height="45" scrollable="false"><remove_style_all /><style name="right_score_header" /><lv_label text="4" x="0" y="13" width="47" style_text_font="dashboard_font_16" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
+			<lv_obj name="grid_hole_out" x="213" y="39" width="46" height="45" scrollable="false"><remove_style_all /><style name="right_score_header" /><lv_label text="OUT" x="0" y="13" width="46" style_text_font="dashboard_font_16" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
+
+			<lv_obj name="grid_par_name" x="0" y="84" width="72" height="45" scrollable="false"><remove_style_all /><style name="right_score_par_header" /><lv_label text="PAR" x="0" y="13" width="72" style_text_font="dashboard_font_16" style_text_align="center" style_text_color="0xffffff" /></lv_obj>
+			<lv_obj name="grid_par_2" x="72" y="84" width="47" height="45" scrollable="false"><remove_style_all /><style name="right_score_par_header" /><lv_label text="4" x="0" y="13" width="47" style_text_font="dashboard_font_16" style_text_align="center" style_text_color="0xffffff" /></lv_obj>
+			<lv_obj name="grid_par_3" x="119" y="84" width="47" height="45" scrollable="false"><remove_style_all /><style name="right_score_par_header" /><lv_label text="5" x="0" y="13" width="47" style_text_font="dashboard_font_16" style_text_align="center" style_text_color="0xffffff" /></lv_obj>
+			<lv_obj name="grid_par_4" x="166" y="84" width="47" height="45" scrollable="false"><remove_style_all /><style name="right_score_par_header" /><lv_label text="3" x="0" y="13" width="47" style_text_font="dashboard_font_16" style_text_align="center" style_text_color="0xffffff" /></lv_obj>
+			<lv_obj name="grid_par_out" x="213" y="84" width="46" height="45" scrollable="false"><remove_style_all /><style name="right_score_par_header" /><lv_label text="12" x="0" y="13" width="46" style_text_font="dashboard_font_16" style_text_align="center" style_text_color="0xffffff" /></lv_obj>
+
+			<lv_obj name="row_vince" x="0" y="129" width="259" height="45" scrollable="false"><remove_style_all /><style name="right_score_row" /><lv_label text="Vince" x="12" y="12" width="64" style_text_font="dashboard_font_18" style_text_color="#glass_ink" /><lv_label text="4" x="72" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="3" x="119" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="-" x="166" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="7" x="213" y="12" width="46" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
+			<lv_obj name="row_justin" x="0" y="174" width="259" height="45" scrollable="false"><remove_style_all /><style name="right_score_row" /><lv_label text="Justin" x="12" y="12" width="64" style_text_font="dashboard_font_18" style_text_color="#glass_ink" /><lv_label text="6" x="72" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="3" x="119" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="5" x="166" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="14" x="213" y="12" width="46" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
+			<lv_obj name="row_dan" x="0" y="219" width="259" height="45" scrollable="false"><remove_style_all /><style name="right_score_row" /><lv_label text="Dan" x="12" y="12" width="64" style_text_font="dashboard_font_18" style_text_color="#glass_ink" /><lv_label text="6" x="72" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="3" x="119" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="3" x="166" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="12" x="213" y="12" width="46" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
+			<lv_obj name="row_moric" x="0" y="264" width="259" height="45" scrollable="false"><remove_style_all /><style name="right_score_row" /><lv_label text="Moric..." x="12" y="12" width="64" style_text_font="dashboard_font_18" style_text_color="#glass_ink" /><lv_label text="6" x="72" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="3" x="119" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="3" x="166" y="12" width="47" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /><lv_label text="12" x="213" y="12" width="46" style_text_font="dashboard_font_18" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
+		</lv_obj>
+
+		<lv_obj name="live_tips" ignore_layout="true" x="752" y="417" width="260" height="83" scrollable="false">
+			<remove_style_all />
+			<style name="right_glass_panel_soft" />
+			<lv_obj name="live_tips_fill" ignore_layout="true" x="2" y="2" width="256" height="79" scrollable="false">
+				<remove_style_all />
+				<style name="right_glass_fill_soft" />
+			</lv_obj>
+			<lv_obj name="live_tips_shine" ignore_layout="true" x="1" y="1" width="258" height="26" scrollable="false">
+				<remove_style_all />
+				<style name="right_glass_shine" />
+			</lv_obj>
+			<lv_label text="Live Tips" x="40" y="14" width="120" style_text_font="dashboard_font_16" style_text_color="#glass_ink" />
+			<lv_obj name="tip_icon" x="17" y="16" width="16" height="16" scrollable="false"><remove_style_all /><style name="right_nav_icon_ring" /></lv_obj>
+			<lv_obj name="tip_map_chip" x="199" y="18" width="49" height="48" scrollable="false">
+				<remove_style_all />
+				<style name="right_map_chip" />
+			</lv_obj>
+			<lv_label text="Green slopes back to front. Miss short to avoid bunker." x="14" y="43" width="176" style_text_font="dashboard_font_14" style_text_color="0x233029" />
+		</lv_obj>
+
+		<lv_obj name="utility_nav" ignore_layout="true" x="752" y="512" width="260" height="76" scrollable="false">
+			<remove_style_all />
+			<style name="right_glass_panel" />
+			<lv_obj name="utility_nav_fill" ignore_layout="true" x="2" y="2" width="256" height="72" scrollable="false">
+				<remove_style_all />
+				<style name="right_glass_fill_strong" />
+			</lv_obj>
+			<lv_obj name="utility_nav_shine" ignore_layout="true" x="1" y="1" width="258" height="26" scrollable="false">
+				<remove_style_all />
+				<style name="right_glass_shine" />
+			</lv_obj>
+
+			<lv_obj name="nav_golf" x="0" y="7" width="65" height="62" scrollable="false"><remove_style_all /><style name="right_nav_cell" /><lv_obj x="24" y="3" width="18" height="18" scrollable="false"><remove_style_all /><style name="right_nav_icon_ring" /></lv_obj><lv_label text="Golf" x="0" y="43" width="65" style_text_font="dashboard_font_14" style_text_align="center" style_text_color="#glass_ink" /><lv_obj x="19" y="58" width="27" height="1" scrollable="false"><remove_style_all /><style name="right_nav_active_line" /></lv_obj></lv_obj>
+			<lv_obj name="nav_food" x="65" y="7" width="65" height="62" scrollable="false"><remove_style_all /><style name="right_nav_cell" /><lv_obj x="24" y="3" width="18" height="18" scrollable="false"><remove_style_all /><style name="right_nav_icon_ring" /></lv_obj><lv_label text="Food/Bev" x="0" y="43" width="65" style_text_font="dashboard_font_14" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
+			<lv_obj name="nav_help" x="130" y="7" width="65" height="62" scrollable="false"><remove_style_all /><style name="right_nav_cell" /><lv_obj x="24" y="3" width="18" height="18" scrollable="false"><remove_style_all /><style name="right_nav_icon_ring" /></lv_obj><lv_label text="Help" x="0" y="43" width="65" style_text_font="dashboard_font_14" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
+			<lv_obj name="nav_profile" x="195" y="7" width="65" height="62" scrollable="false"><remove_style_all /><style name="right_nav_cell" /><lv_obj x="24" y="3" width="18" height="18" scrollable="false"><remove_style_all /><style name="right_nav_icon_ring" /></lv_obj><lv_label text="Profile" x="0" y="43" width="65" style_text_font="dashboard_font_14" style_text_align="center" style_text_color="#glass_ink" /></lv_obj>
+		</lv_obj>
+	</view>
+</component>

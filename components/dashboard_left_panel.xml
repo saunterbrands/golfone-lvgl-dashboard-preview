@@ -1,0 +1,58 @@
+<component>
+	<previews>
+		<preview name="target_map" style_bg_image_src="dashboard_bg_target" style_bg_color="0x07120e" />
+	</previews>
+
+	<api>
+		<prop name="pace_subject" type="subject" default="dashboard_pace_status" />
+		<prop name="clock_subject" type="subject" default="dashboard_clock_label" />
+	</api>
+
+	<styles>
+		<style name="left_panel_root" width="#dashboard_w" height="#dashboard_h" bg_opa="0" border_width="0" radius="0" pad_all="0" />
+		<style name="left_glass_footer" bg_color="#glass_shell" bg_opa="60%" border_color="#glass_border" border_opa="49%" border_width="1" radius="12" shadow_width="18" shadow_color="#glass_shadow" shadow_opa="20%" shadow_offset_y="6" pad_all="0" />
+		<style name="left_glass_shine" bg_color="0xffffff" bg_opa="18%" border_width="0" radius="11" />
+		<style name="left_glass_fill" bg_color="#glass_shell" bg_opa="84%" border_width="0" radius="10" />
+		<style name="left_glass_shade_style" bg_color="#glass_shade" bg_opa="7%" border_width="0" radius="11" />
+		<style name="left_logo_mark" bg_opa="0" border_color="#golfone_green" border_opa="100%" border_width="2" radius="8" pad_all="0" />
+		<style name="left_logo_stem" bg_color="#golfone_green" bg_opa="100%" border_width="0" radius="1" pad_all="0" />
+	</styles>
+
+	<view extends="lv_obj">
+		<remove_style_all />
+		<style name="left_panel_root" />
+
+		<lv_obj name="footer" ignore_layout="true" x="12" y="12" width="260" height="76" scrollable="false">
+			<remove_style_all />
+			<style name="left_glass_footer" />
+
+			<lv_obj name="footer_fill" ignore_layout="true" x="2" y="2" width="256" height="72" scrollable="false">
+				<remove_style_all />
+				<style name="left_glass_fill" />
+			</lv_obj>
+			<lv_obj name="footer_shine" ignore_layout="true" x="1" y="1" width="258" height="26" scrollable="false">
+				<remove_style_all />
+				<style name="left_glass_shine" />
+			</lv_obj>
+			<lv_obj name="footer_shade" ignore_layout="true" x="1" y="55" width="258" height="20" scrollable="false">
+				<remove_style_all />
+				<style name="left_glass_shade_style" />
+			</lv_obj>
+
+			<lv_label text="Powered by" x="16" y="12" width="120" style_text_font="dashboard_font_12" style_text_color="#glass_muted" style_text_opa="87%" />
+			<lv_obj name="logo_ring" ignore_layout="true" x="13" y="30" width="16" height="16" scrollable="false">
+				<remove_style_all />
+				<style name="left_logo_mark" />
+			</lv_obj>
+			<lv_obj name="logo_stem" ignore_layout="true" x="20" y="25" width="2" height="12" scrollable="false">
+				<remove_style_all />
+				<style name="left_logo_stem" />
+			</lv_obj>
+			<lv_label text="Golf" x="32" y="36" width="54" style_text_font="dashboard_font_20" style_text_color="#glass_ink" />
+			<lv_label text="One" x="83" y="36" width="54" style_text_font="dashboard_font_20" style_text_color="#glass_ink" />
+
+			<lv_label bind_text="$pace_subject" x="144" y="12" width="100" style_text_font="dashboard_font_14" style_text_color="#glass_ink" />
+			<lv_label bind_text="$clock_subject" x="144" y="35" width="100" style_text_font="dashboard_font_24" style_text_color="#glass_ink" />
+		</lv_obj>
+	</view>
+</component>

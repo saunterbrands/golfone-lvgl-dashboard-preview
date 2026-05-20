@@ -12,34 +12,35 @@
 	<styles>
 		<style
 			name="pin_shell"
-			width="168"
-			height="122"
-			bg_color="#glass_shell"
-			bg_opa="38%"
+			width="146"
+			height="116"
+			bg_color="0xf5fbf2"
+			bg_opa="20%"
 			border_color="#glass_border"
-			border_opa="24%"
+			border_opa="49%"
 			border_width="1"
 			radius="34"
 			shadow_width="24"
 			shadow_color="#glass_shadow"
-			shadow_opa="18%"
-			shadow_offset_y="10"
+			shadow_opa="14%"
+			shadow_offset_y="9"
 			pad_all="0"
 		/>
-		<style name="pin_shine" bg_color="0xffffff" bg_opa="16%" border_width="0" radius="33" />
+		<style name="pin_inner" bg_color="0x0a1d16" bg_opa="7%" border_width="0" radius="30" />
 	</styles>
 
 	<view extends="lv_obj">
 		<remove_style_all />
 		<style name="pin_shell" />
 
-		<lv_obj name="pin_shine" ignore_layout="true" x="1" y="1" width="166" height="42" scrollable="false">
+		<lv_obj name="pin_inner" ignore_layout="true" x="4" y="4" width="137" height="107" scrollable="false">
 			<remove_style_all />
-			<style name="pin_shine" />
+			<style name="pin_inner" />
 		</lv_obj>
 
-		<lv_label bind_text="$elevation_subject" x="0" y="15" width="168" style_text_font="dashboard_font_12" style_text_align="center" style_text_color="0xffffff" />
-		<lv_label bind_text="$yards_subject" x="0" y="35" width="168" style_text_font="dashboard_font_46" style_text_align="center" style_text_color="#glass_ink" />
-		<lv_label bind_text="$unit_subject" x="0" y="88" width="168" style_text_font="dashboard_font_12" style_text_align="center" style_text_color="#glass_ink" />
+		<lv_label text="TO GREEN" x="0" y="11" width="146" style_text_font="dashboard_font_12" style_text_align="center" style_text_color="0xf0fff2" style_text_opa="89%" />
+		<lv_label bind_text="$yards_subject" x="0" y="27" width="146" style_text_font="dashboard_font_48" style_text_align="center" style_text_color="0xf8fff4" />
+		<lv_label bind_text="$unit_subject" x="0" y="74" width="146" style_text_font="dashboard_font_12" style_text_align="center" style_text_color="0xf0fff2" style_text_opa="89%" />
+		<lv_label bind_text="$elevation_subject" x="65" y="91" width="78" style_text_font="dashboard_font_14" style_text_align="left" style_text_color="0xffffff" />
 	</view>
 </component>

@@ -1,0 +1,31 @@
+<component>
+	<previews>
+		<preview name="target_map" style_bg_image_src="dashboard_bg_target" style_bg_color="0x07120e" />
+	</previews>
+
+	<styles>
+		<style name="zoom_shell" width="106" height="38" bg_color="0xffffff" bg_opa="46%" border_color="0xffffff" border_opa="100%" border_width="1" radius="17" pad_all="0" />
+		<style name="zoom_button" bg_color="0xffffff" bg_opa="84%" border_width="0" radius="14" pad_all="0" />
+		<style name="zoom_button_disabled" bg_color="0xffffff" bg_opa="32%" border_width="0" radius="14" pad_all="0" />
+	</styles>
+
+	<view extends="lv_obj">
+		<remove_style_all />
+		<style name="zoom_shell" />
+		<lv_obj name="zoom_out" x="5" y="5" width="28" height="28" scrollable="false">
+			<remove_style_all />
+			<style name="zoom_button_disabled" />
+			<lv_label text="-" x="0" y="3" width="28" style_text_font="dashboard_font_20" style_text_align="center" style_text_color="0x0b2119" style_text_opa="38%" />
+		</lv_obj>
+		<lv_obj name="zoom_reset" x="39" y="5" width="28" height="28" scrollable="false">
+			<remove_style_all />
+			<style name="zoom_button_disabled" />
+			<lv_label text="1x" x="0" y="6" width="28" style_text_font="dashboard_font_14" style_text_align="center" style_text_color="0x0b2119" style_text_opa="38%" />
+		</lv_obj>
+		<lv_obj name="zoom_in" x="73" y="5" width="28" height="28" scrollable="false">
+			<remove_style_all />
+			<style name="zoom_button" />
+			<lv_label text="+" x="0" y="3" width="28" style_text_font="dashboard_font_20" style_text_align="center" style_text_color="0x0b2119" />
+		</lv_obj>
+	</view>
+</component>
