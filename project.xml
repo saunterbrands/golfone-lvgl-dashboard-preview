@@ -1,0 +1,7 @@
+<project name="golfone_dashboard" lvgl_version="9.5.0">
+	<targets>
+		<target name="waveshare_p4_nano_design">
+			<display width="1024" height="600" />
+		</target>
+	</targets>
+</project>

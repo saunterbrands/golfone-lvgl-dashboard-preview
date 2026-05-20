@@ -1,0 +1,45 @@
+<component>
+	<previews>
+		<preview name="target_map" style_bg_image_src="dashboard_bg_target" style_bg_color="0x07120e" />
+	</previews>
+
+	<api>
+		<prop name="yards_subject" type="subject" default="pin_yards_label" />
+		<prop name="unit_subject" type="subject" default="pin_unit_label" />
+		<prop name="elevation_subject" type="subject" default="pin_elevation_label" />
+	</api>
+
+	<styles>
+		<style
+			name="pin_shell"
+			width="168"
+			height="122"
+			bg_color="#glass_shell"
+			bg_opa="38%"
+			border_color="#glass_border"
+			border_opa="24%"
+			border_width="1"
+			radius="34"
+			shadow_width="24"
+			shadow_color="#glass_shadow"
+			shadow_opa="18%"
+			shadow_offset_y="10"
+			pad_all="0"
+		/>
+		<style name="pin_shine" bg_color="0xffffff" bg_opa="16%" border_width="0" radius="33" />
+	</styles>
+
+	<view extends="lv_obj">
+		<remove_style_all />
+		<style name="pin_shell" />
+
+		<lv_obj name="pin_shine" ignore_layout="true" x="1" y="1" width="166" height="42" scrollable="false">
+			<remove_style_all />
+			<style name="pin_shine" />
+		</lv_obj>
+
+		<lv_label bind_text="$elevation_subject" x="0" y="15" width="168" style_text_font="dashboard_font_12" style_text_align="center" style_text_color="0xffffff" />
+		<lv_label bind_text="$yards_subject" x="0" y="35" width="168" style_text_font="dashboard_font_46" style_text_align="center" style_text_color="#glass_ink" />
+		<lv_label bind_text="$unit_subject" x="0" y="88" width="168" style_text_font="dashboard_font_12" style_text_align="center" style_text_color="#glass_ink" />
+	</view>
+</component>

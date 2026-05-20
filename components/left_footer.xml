@@ -1,0 +1,61 @@
+<component>
+	<previews>
+		<preview name="target_map" style_bg_image_src="dashboard_bg_target" style_bg_color="0x07120e" />
+	</previews>
+
+	<api>
+		<prop name="pace_subject" type="subject" default="dashboard_pace_status" />
+		<prop name="clock_subject" type="subject" default="dashboard_clock_label" />
+	</api>
+
+	<styles>
+		<style
+			name="footer_shell"
+			width="#rail_w"
+			height="#footer_h"
+			bg_color="#glass_shell"
+			bg_opa="60%"
+			border_color="#glass_border"
+			border_opa="49%"
+			border_width="1"
+			radius="#glass_radius"
+			shadow_width="18"
+			shadow_color="#glass_shadow"
+			shadow_opa="20%"
+			shadow_offset_y="6"
+			pad_all="0"
+		/>
+		<style name="footer_shine" bg_color="0xffffff" bg_opa="18%" border_width="0" radius="11" />
+		<style name="footer_shade" bg_color="#glass_shade" bg_opa="5%" border_width="0" radius="11" />
+		<style name="footer_stack" bg_opa="0" border_width="0" radius="0" pad_all="0" />
+	</styles>
+
+	<view extends="lv_obj">
+		<remove_style_all />
+		<style name="footer_shell" />
+
+		<lv_obj name="shine" ignore_layout="true" x="1" y="1" width="258" height="26" scrollable="false">
+			<remove_style_all />
+			<style name="footer_shine" />
+		</lv_obj>
+
+		<lv_obj name="shade" ignore_layout="true" x="1" y="55" width="258" height="18" scrollable="false">
+			<remove_style_all />
+			<style name="footer_shade" />
+		</lv_obj>
+
+		<lv_obj name="powered_stack" ignore_layout="true" x="16" y="12" width="112" height="50" scrollable="false">
+			<remove_style_all />
+			<style name="footer_stack" />
+			<lv_label text="Powered by" x="0" y="0" style_text_font="dashboard_font_8" style_text_color="#glass_muted" style_text_opa="87%" />
+			<lv_image src="golfone_logo_dashboard" x="0" y="21" />
+		</lv_obj>
+
+		<lv_obj name="pace_clock" ignore_layout="true" x="144" y="12" width="100" height="50" scrollable="false">
+			<remove_style_all />
+			<style name="footer_stack" />
+			<lv_label bind_text="$pace_subject" x="0" y="0" width="100" style_text_font="dashboard_font_9" style_text_color="#glass_ink" />
+			<lv_label bind_text="$clock_subject" x="0" y="23" width="100" style_text_font="dashboard_font_15" style_text_color="#glass_ink" />
+		</lv_obj>
+	</view>
+</component>

@@ -1,0 +1,9 @@
+<screen permanent="true">
+	<view>
+		<style name="dashboard_screen" />
+
+		<lv_image src="dashboard_bg_target" x="0" y="0" />
+		<left_footer x="#rail_margin" y="#rail_margin" />
+		<pin_readout x="428" y="230" />
+	</view>
+</screen>

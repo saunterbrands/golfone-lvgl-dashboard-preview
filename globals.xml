@@ -1,0 +1,49 @@
+<globals>
+	<consts>
+		<int name="dashboard_w" value="1024" />
+		<int name="dashboard_h" value="600" />
+		<int name="rail_w" value="260" />
+		<int name="rail_gap" value="9" />
+		<int name="rail_margin" value="12" />
+		<int name="footer_h" value="74" />
+		<int name="glass_radius" value="12" />
+
+		<color name="glass_ink" value="0x082219" />
+		<color name="glass_muted" value="0x1f342a" />
+		<color name="glass_shell" value="0xf8fff5" />
+		<color name="glass_border" value="0xffffff" />
+		<color name="glass_shadow" value="0x000000" />
+		<color name="glass_shade" value="0x082219" />
+		<color name="golfone_green" value="0x92d547" />
+	</consts>
+
+	<styles>
+		<style name="dashboard_screen" width="#dashboard_w" height="#dashboard_h" bg_color="0x07120e" bg_opa="100%" border_width="0" radius="0" pad_all="0" />
+		<style name="transparent_reset" bg_opa="0" border_width="0" radius="0" pad_all="0" />
+		<style name="glass_text" text_color="#glass_ink" text_opa="100%" />
+		<style name="glass_text_muted" text_color="#glass_muted" text_opa="87%" />
+	</styles>
+
+	<subjects>
+		<string name="dashboard_pace_status" value="8 min behind" />
+		<string name="dashboard_clock_label" value="9:41 AM" />
+		<string name="pin_yards_label" value="225" />
+		<string name="pin_unit_label" value="YARDS" />
+		<string name="pin_elevation_label" value="+3 ft" />
+	</subjects>
+
+	<images>
+		<file name="dashboard_bg_target" src_path="images/hole_4_dashboard_bg_1024x600.png" />
+		<file name="dashboard_bg_overview" src_path="images/hole_4_dashboard_overview_bg_1024x600.png" />
+		<data name="golfone_logo_dashboard" src_path="images/golfone_logo_dashboard_82x16.png" color_format="argb8888" />
+	</images>
+
+	<fonts>
+		<bin name="dashboard_font_8" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="8" range="0x20-0x7f" />
+		<bin name="dashboard_font_9" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="9" range="0x20-0x7f" />
+		<bin name="dashboard_font_12" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="12" range="0x20-0x7f" />
+		<bin name="dashboard_font_15" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="15" range="0x20-0x7f" />
+		<bin name="dashboard_font_28" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="28" range="0x20-0x7f" />
+		<bin name="dashboard_font_46" as_file="false" bpp="2" src_path="fonts/Montserrat_Medium.ttf" size="46" range="0x20-0x7f" />
+	</fonts>
+</globals>
